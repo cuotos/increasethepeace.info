@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="peace_symbol.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="8.32"
+     inkscape:cx="46.09375"
+     inkscape:cy="48.737981"
+     inkscape:window-width="976"
+     inkscape:window-height="1186"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3" />
+  <circle
+     cx="50"
+     cy="50"
+     r="40"
+     fill="none"
+     stroke="#a78bfa"
+     stroke-width="2.5"
+     id="circle1" />
+  <line
+     x1="50"
+     y1="10"
+     x2="50"
+     y2="88.70192"
+     stroke="#a78bfa"
+     stroke-width="3.50673"
+     id="line1" />
+  <line
+     x1="49.684078"
+     y1="50.315922"
+     x2="21.181307"
+     y2="76.174461"
+     stroke="#a78bfa"
+     stroke-width="3.39356"
+     id="line2" />
+  <line
+     x1="50.324482"
+     y1="50.324482"
+     x2="77.367828"
+     y2="77.968788"
+     stroke="#a78bfa"
+     stroke-width="3.41777"
+     id="line3" />
+</svg>
