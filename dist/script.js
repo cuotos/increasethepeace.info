@@ -10,12 +10,11 @@ function randomisePeaceSymbols() {
         // Create a seed value from position and size
         const seed = (top * 100 + left * 100);
 
-        console.log(`Symbol at top: ${top}, left: ${left} has seed: ${seed}`);
         
         // Use the seed to create deterministic rotation, opacity, and scale
         const rotation = seededRandom(seed, -45, 45);
         const opacity = seededRandom(seed, 0.5, 1);
-        const scale = seededRandom(seed, 0.8, 1.2);
+        const scale = seededRandom(seed, 0.3, 0.8);
         
         // Apply transformations using CSS custom properties to work with animation
         symbol.style.setProperty('--rotation', `${rotation}deg`);
@@ -31,24 +30,9 @@ function seededRandom(seed, min, max) {
     return min + random * (max - min);
 }
 
-// Add parallax effect to peace symbols on scroll
-function initParallax() {
-    const symbols = document.querySelectorAll('.peace-symbol');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        symbols.forEach((symbol, index) => {
-            const speed = 0.1 + (index % 5) * 0.05;
-            const yPos = -(scrolled * speed);
-            symbol.style.transform += ` translateY(${yPos}px)`;
-        });
-    });
-}
-
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     randomisePeaceSymbols();
-    // initParallax();
     
     // Add fade-in effect for cards
     const cards = document.querySelectorAll('.content-card');
