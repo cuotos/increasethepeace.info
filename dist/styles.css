@@ -11,10 +11,6 @@
   --purple: #8a1f78;
   --green:  #b8c31f;
   
-
-  --accent: #8a1f78;
-  --accent-2: #b8c31f;
-
   --container: min(100% - 2rem, 980px);
   --radius-xl: 22px;
   --radius-lg: 18px;
@@ -84,7 +80,7 @@ img{ max-width: 100%; display: block; }
   display: grid;
   place-items: center;
   text-decoration: none;
-  border: 8px solid rgb(138, 31, 120);
+  border: 8px solid var(--purple);
   padding: 6px;
   background: white;
 }
@@ -140,6 +136,7 @@ img{ max-width: 100%; display: block; }
   padding: clamp(18px, 3vw, 28px);
   box-shadow: var(--shadow);
   border: 2px solid rgba(0,0,0,.06);
+  text-align: center;
 }
 
 .heroTitle{
@@ -150,9 +147,10 @@ img{ max-width: 100%; display: block; }
   letter-spacing: .2px;
 }
 .heroTitle span{
-  color: var(--accent);
+  color: var(--purple);
   white-space: nowrap;
 }
+
 
 .heroText{
   margin: 0;
@@ -332,15 +330,17 @@ img{ max-width: 100%; display: block; }
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  background: var(--white);
+  background: var(--purple);
   border: 2px solid var(--purple);
-  color: var(--purple);
+  color: var(--white);
   display: grid;
   place-items: center;
   font-weight: 800;
   font-size: 1.9rem;
   font-family: var(--font-display);
-  position: relative;;
+  line-height: 1;
+  padding-bottom: 4px;
+  position: relative;
   
 }
 
@@ -400,13 +400,13 @@ img{ max-width: 100%; display: block; }
 }
 
 .link{
-  color: var(--accent);
+  color: var(--purple);
   font-weight: 700;
   text-decoration: none;
 }
 .link:hover{ text-decoration: underline; }
 
-.link--accent{ color: var(--accent); }
+.link--accent{ color: var(--purple); }
 
 /* Sponsors */
 .sponsors{ padding-top: 20px; }
