@@ -1,41 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save the Date</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
-        }
-        
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <img src="images/save_the_date.jpg" alt="Save the Date">
-</body>
-<!-- test comment -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Increase The Peace</title>
+    <meta
+      name="description"
+      content="Increase the Peace is a community-powered festival across Boscombe High Street, bringing artists, venues and neighbours together to raise funds and grow connection."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Livvic:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER (pattern + wave + logo + pills)
+    ========================== -->
+    <header class="top">
+      <div class="top__pattern" id="peacePattern" aria-hidden="true"></div>
+
+      <div class="top__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
+          <path
+            d="M0,20 C240,210 420,40 720,30 C1020,30 1180,80 1440,20 L1440,240 L0,240 Z"
+            fill="var(--lilac)"
+          />
+        </svg>
+      </div>
+
+      <div class="container top__inner">
+        <a class="logoBadge" href="#" aria-label="Increase the Peace home">
+          <img src="images/itp-logo.png" alt="Increase the Peace logo" />
+        </a>
+
+        <nav class="pillNav" aria-label="Primary">
+          <a class="pill" href="#about">About</a>
+          <a class="pill" href="#this-year">This year</a>
+          <a class="pill" href="#artists">Artists</a>
+          <a class="pill" href="#venues">Our venues</a>
+          <a class="pill" href="#charities">Charities</a>
+          <a class="pill" href="#get-involved">Get involved</a>
+            <a class="pill pill--active" href="#charities" aria-current="page">Charities</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =========================
+         HERO (purple band + intro card + 3 feature cards)
+    ========================== -->
+    <section class="section section--purple" id="charities">
+      <div class="container">
+        <h1 class="centerTitle centerTitle--white">
+          MUSIC. ART. COMMUNITY.<span>PEACE IN ACTION.</span>
+        </h1>
+        <p class="centerText centerText--white">
+          Increase the Peace is a community-powered festival across Boscombe High Street, bringing artists, venues and
+          neighbours together to raise funds, grow connection and demonstrate the power of an open heart.
+        </p>
+
+        <div class="trioGrid" aria-label="Festival highlights">
+          <article class="infoCard">
+            <div class="featureIcon" aria-hidden="true">
+              <img src="images/icons/highstreet.png" alt="" />
+            </div>
+            <h3>Across the high street</h3>
+            <p>Venues inside and outside, all connected.</p>
+          </article>
+
+          <article class="infoCard">
+            <div class="featureIcon" aria-hidden="true">
+              <img src="images/icons/community.png" alt="" />
+            </div>
+            <h3>Community-powered</h3>
+            <p>Artists, neighbours, volunteers, audiences.</p>
+          </article>
+
+          <article class="infoCard">
+            <div class="featureIcon" aria-hidden="true">
+              <img src="images/icons/fundraising.png" alt="" />
+            </div>
+            <h3>Fundraising</h3>
+            <p>Supporting local charities</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         ABOUT + HOW TO JOIN
+    ========================== -->
+    <main class="section section--white" id="about">
+      <div class="container twoCol">
+        <section class="copyBlock">
+          <h2>What is Increase the Peace?</h2>
+          <p> Increase The Peace is a 1 day, community-powered festival celebrating creativity, connection and collective action. Across venues inside and outside along Boscombe High Street, artists, musicians, neighbours and local businesses come together to raise money, open doors and grow community.
+          </p>
+            <ol class="bullets">
+              <li class="bullet">    
+                <span class="bullet__dot"></span>
+                <span class="bullet__text">Welcoming, inclusive, and easy to join</span>
+              </li>
+              <li class="bullet">
+                <span class="bullet__dot"></span>
+                <span class="bullet__text">Built with local venues and artists</span>
+              </li>
+              <li class="bullet">
+                <span class="bullet__dot"></span>
+                <span class="bullet__text">Raising funds for local charities</span>
+              </li>
+             </ol>
+        </section>
+
+        <aside class="joinCard" aria-label="How to join us on the day">
+          <h3>How to join us on the day</h3>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step__dot">1</span>
+              <div class="step__text">
+                Turn up - free performances and community spaces on the High Street.
+              </div>
+            </li>
+            
+            <li class="step">
+              <span class="step__dot">2</span>
+              <div class="step__text">
+                Drop in - donate around £5 (or what you can afford) to enter individual venues.
+              </div>
+            </li>
+
+            <li class="step">
+              <span class="step__dot">3</span>
+              <div class="step__text">
+                Go all in - donate £20 for a wristband and access everywhere, all day and night.
+              </div>
+            </li>
+          </ol>
+        </aside>
+      </div>
+      <div class="container testimonal">
+      <section class="testimonal" aria-label="Testimonial">
+      <p>“Increase the Peace was created to show what’s possible when a community chooses connection. Across Boscombe, we open our doors, our stages and our hearts. By welcoming the stranger and working together, we can grow something powerful, raising vital funds for local charities and proving that kindness is not small. It changes things.”</p>
+      <p><strong>From Claire, Founder & Creative Director</strong></p>
+      </section></div>
+    </section>
+
+    </main>
+
+    <!-- =========================
+         BIGGER THAN EVER (green with wave top)
+    ========================== -->
+    <section class="section section--green" id="this-year">
+      <div class="sectionWave sectionWave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 700" preserveAspectRatio="none" focusable="false">
+          <path
+            d="M0,300 C240,10 420,40 720,10 C1020,10 1180,80 1440,500 L1440,700 L0,700 Z"
+            fill="var(--green)"
+          />
+        </svg>
+      </div>
+
+      <div class="container">
+        <h2 class="centerTitle">Bigger than ever</h2>
+        <p class="centerText">
+          This year we’re going bigger than ever. More artists. More collaboration. Our charity partners are currently
+          being selected, with all funds raised going directly to causes that strengthen our local community.
+        </p>
+
+        <div class="trioGrid">
+          <article class="infoCard">
+            <h3>More venues</h3>
+            <p>Across the high street and beyond, indoors and outdoors.</p>
+            <a class="link" href="#venues">See our venues +</a>
+          </article>
+
+          <article class="infoCard">
+            <h3>More artists</h3>
+            <p>Music, performance, art, and the unexpected. Here are our headline ones..</p>
+            <a class="link" href="#artists">See our artists</a>
+          </article>
+
+          <article class="infoCard">
+            <h3>More impact</h3>
+            <p>Fundraising that stays rooted in the local community.</p>
+            <a class="link" href="#charities">See our charities</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         WHY IT MATTERS (white + purple wave bottom)
+    ========================== -->
+    <section class="section section--white" aria-label="Why it matters">
+      <div class="container why">
+        <h2 class="centerTitle">Why it matters</h2>
+        <p class="centerText centerText--tight">
+          Because community is powerful. Because creativity builds bridges.<br />
+          Because welcoming the stranger can change everything.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         GET INVOLVED (purple band with wave + 3 cards)
+    ========================== -->
+    <section class="section section--purple" id="get-involved">
+      <div class="sectionWave sectionWave--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
+          <path
+            d="M0,20 C240,210 420,40 720,30 C1020,30 1180,80 1440,120 L1440,0 L0,0 Z"
+            fill="var(--white)"
+          />
+        </svg>
+      </div>
+
+      <div class="container">
+        <h2 class="centerTitle centerTitle--white">Get involved</h2>
+        <p class="centerText centerText--white">
+          Whether you’re an artist, venue, volunteer or supporter, there’s a place for you.
+        </p>
+
+        <div class="trioGrid">
+          <article class="infoCard">
+            <h3>Partner with us</h3>
+            <p>Venues, local businesses, community groups. Let’s build something brilliant together.</p>
+            <a class="link link--accent" href="#">Register interest →</a>
+          </article>
+
+          <article class="infoCard">
+            <h3>Volunteer</h3>
+            <p>Help with stewarding, set-up, welcoming, wayfinding, or crew support.</p>
+            <a class="link link--accent" href="#">Join the volunteer list →</a>
+          </article>
+
+          <article class="infoCard">
+            <h3>Support the festival</h3>
+            <p>Share posts, bring a friend, donate on the day, and show up with an open heart.</p>
+            <a class="link link--accent" href="#">Make a donation →</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="sectionWave sectionWave--bottom" aria-hidden="true">
+        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
+          <path
+            d="M0,120 C220,40 480,220 740,130 C1010,40 1200,200 1440,120 L1440,240 L0,240 Z"
+            fill="var(--purple)"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- =========================
+         SPONSORS
+    ========================== -->
+    <section class="section section--white" id="sponsors">
+      <div class="container sponsors">
+        <h2 class="centerTitle">Our lovely sponsors</h2>
+        <p class="centerText">We couldn’t do this without your support</p>
+
+        <div class="sponsorGrid" aria-label="Sponsors">
+          <img class="sponsorLogo" src="images/logos/soundan.png" alt="SounDan Sound Engineering" />
+          <img class="sponsorLogo" src="images/logos/bigwigs.png" alt="BigWigs Bakery" />
+          <img class="sponsorLogo" src="images/logos/can.png" alt="Community Action Network" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         FOOTER (purple band + socials)
+    ========================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__copy">
+          <p class="footer__title">Increase the Peace Boscombe 2026</p>
+          <p class="footer__sub">A community-powered festival across Boscombe High Street.</p>
+        </div>
+
+        <div class="footer__social" aria-label="Social links">
+          <a class="socialBtn" href="#" aria-label="Facebook">
+            <img src="images/index.png" alt="" aria-hidden="true" />
+          </a>
+          <a class="socialBtn" href="#" aria-label="LinkedIn">
+            <img src="images/ChatGPT Image Feb 18, 2026, 05_23_39 PM 2.png" alt="" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  <script src="peace-pattern.js"></script>
+  </body>
 </html>
