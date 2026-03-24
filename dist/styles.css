@@ -53,11 +53,8 @@ img{ max-width: 100%; display: block; }
 .top__pattern{
   position: absolute;
   inset: 0;
-  background-image: url("images/peacebg.png");
-  background-repeat: repeat;
-  background-size: 520px auto; /* matches your wide pattern strip feel */
-  opacity: 1;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .top__wave{
