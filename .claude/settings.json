@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick /Users/dan/repos/github/cuotos/increasethepeace.info/dist/images/ITP-25-final.png \\\\\\( +clone -alpha transparent -background none -fill white -draw \"circle 600,600 600,140\" \\\\\\) -compose DstIn -composite /Users/dan/repos/github/cuotos/increasethepeace.info/dist/images/ITP-25-logo.png)",
+      "Bash(magick /Users/dan/repos/github/cuotos/increasethepeace.info/dist/images/ITP-25-logo.png -trim +repage /Users/dan/repos/github/cuotos/increasethepeace.info/dist/images/ITP-25-logo.png)",
+      "Bash(magick identify:*)"
+    ]
+  }
+}

@@ -4,7 +4,9 @@
 
   // Fixed coordinate space. The SVG is rendered at a fixed pixel width and
   // centred, so symbols never scale or shift on resize - excess clips equally.
-  var VW = 1440, VH = 340;
+  // VH is measured from the actual header height after layout.
+  var VW = 1440;
+  var VH = container.parentElement.offsetHeight || 340;
   var count = 30;
   var padding = 6;
   var placed = [];
@@ -26,7 +28,7 @@
 
   var svg = el('svg', {
     width: VW,
-    height: '100%',
+    height: VH,
     viewBox: '0 0 ' + VW + ' ' + VH,
     preserveAspectRatio: 'none'
   });

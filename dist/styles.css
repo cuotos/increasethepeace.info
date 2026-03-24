@@ -62,7 +62,7 @@ img{ max-width: 100%; display: block; }
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 220px;
+  height: 65%;
   pointer-events: none;
 }
 .top__wave{ z-index: 1; }
@@ -78,14 +78,14 @@ img{ max-width: 100%; display: block; }
 
 /* Logo badge */
 .logoBadge{
-  width: clamp(160px, 26vw, 210px);
+  width: clamp(180px, 16vw, 500px);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  padding: 10px;
-  transform: translateY(26px); /* overlap onto lilac wave */
+  padding: 0;
   text-decoration: none;
+  box-shadow: -6px 6px 18px rgba(138, 31, 120, 0.5);
 }
 .logoBadge img{
   width: 100%;
