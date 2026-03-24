@@ -206,7 +206,7 @@ img{ max-width: 100%; display: block; }
 }
 
 .section--white{ background: var(--white); }
-.section--green{ background: var(--green); padding-top: 30px; position: relative; }
+.section--green{ padding-top: 30px; position: relative; }
 .section--purple{ background: var(--purple); padding-top: 64px; padding-bottom: 70px; position: relative;}
 
 .sectionWave{
