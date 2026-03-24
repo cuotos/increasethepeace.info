@@ -7,7 +7,7 @@
   // VH is measured from the actual header height after layout.
   var VW = 1440;
   var VH = container.parentElement.offsetHeight || 340;
-  var count = 30;
+  var count = 35;
   var padding = 6;
   var placed = [];
 
@@ -80,7 +80,31 @@
         'rotate('    + (Math.random() * 360).toFixed(1) + ')' +
         'scale('     + r.toFixed(1) + ')'
     });
-    svg.appendChild(use);
+
+    // Drift offsets: 6 directions in viewBox units
+    var drifts = [[45,28],[-38,42],[32,-40],[-44,-26],[40,-34],[-30,38]];
+    var d = drifts[i % 6];
+    var dur = (18 + Math.random() * 16).toFixed(1) + 's';
+    var begin = (-Math.random() * 20).toFixed(1) + 's'; // start mid-cycle on load
+
+    var anim = document.createElementNS(ns, 'animateTransform');
+    anim.setAttribute('attributeName', 'transform');
+    anim.setAttribute('attributeType', 'XML');
+    anim.setAttribute('type', 'translate');
+    anim.setAttribute('values', '0 0;' + d[0] + ' ' + d[1] + ';0 0');
+    anim.setAttribute('keyTimes', '0;0.5;1');
+    anim.setAttribute('dur', dur);
+    anim.setAttribute('begin', begin);
+    anim.setAttribute('repeatCount', 'indefinite');
+    anim.setAttribute('calcMode', 'spline');
+    anim.setAttribute('keySplines', '0.45 0 0.55 1;0.45 0 0.55 1');
+    anim.setAttribute('additive', 'sum');
+
+    // Wrap in <g> so the animation adds to the symbol's own transform
+    var g = el('g', {});
+    g.appendChild(use);
+    g.appendChild(anim);
+    svg.appendChild(g);
   }
 
   container.appendChild(svg);
