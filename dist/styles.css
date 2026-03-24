@@ -413,11 +413,12 @@ img{ max-width: 100%; display: block; }
 
 .sponsorGrid{
   margin-top: 22px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 26px;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 .sponsorLogo{
@@ -493,9 +494,6 @@ img{ max-width: 100%; display: block; }
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .sponsorGrid{
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .footer__inner{
     flex-direction: row;
