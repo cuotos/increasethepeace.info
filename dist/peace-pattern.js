@@ -108,4 +108,10 @@
   }
 
   container.appendChild(svg);
+
+  // Randomise the horizontal start position of each wave so they all look different
+  document.querySelectorAll('.waveImg').forEach(function(svg) {
+    var offset = (Math.random() * 200).toFixed(1);
+    svg.style.transform = 'translateX(-' + offset + '%)';
+  });
 })();

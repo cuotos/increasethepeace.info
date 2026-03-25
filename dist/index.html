@@ -21,20 +21,19 @@
   </head>
 
   <body>
+    <!-- Wave shape defined once, reused and recoloured everywhere -->
+    <svg aria-hidden="true" focusable="false" style="display:none">
+      <defs>
+        <symbol id="wave" viewBox="0 0 3000 300" preserveAspectRatio="none">
+          <path d="M 0,170 C 100,170 350,40 550,80 C 750,120 800,220 1050,190 C 1300,160 1400,50 1600,70 C 1800,90 1900,200 2150,180 C 2400,160 2550,60 2750,80 C 2900,100 2950,130 3000,120 L 3000,300 L 0,300 Z" fill="currentColor"/>
+        </symbol>
+      </defs>
+    </svg>
     <!-- =========================
          HEADER (pattern + wave + logo + pills)
     ========================== -->
     <header class="top">
       <div class="top__pattern" id="peacePattern" aria-hidden="true"></div>
-
-      <div class="top__wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
-          <path
-            d="M0,20 C240,210 420,40 720,30 C1020,30 1180,80 1440,20 L1440,240 L0,240 Z"
-            fill="var(--lilac)"
-          />
-        </svg>
-      </div>
 
       <div class="container top__inner">
         <a class="logoBadge" href="#" aria-label="Increase the Peace home">
@@ -57,10 +56,10 @@
     ========================== -->
     <section class="section section--purple" id="charities">
       <div class="container">
-        <h1 class="centerTitle centerTitle--white">
+        <h1 class="centerTitle centerTitle">
           MUSIC. ART. COMMUNITY.<span>PEACE IN ACTION.</span>
         </h1>
-        <p class="centerText centerText--white">
+        <p class="centerText centerText">
           Increase the Peace is a community-powered festival across Boscombe High Street, bringing artists, venues and
           neighbours together to raise funds, grow connection and demonstrate the power of an open heart.
         </p>
@@ -158,15 +157,6 @@
          BIGGER THAN EVER (green with wave top)
     ========================== -->
     <section class="section section--green" id="this-year">
-      <div class="sectionWave sectionWave--top" aria-hidden="true">
-        <svg viewBox="0 0 1440 700" preserveAspectRatio="none" focusable="false">
-          <path
-            d="M0,300 C240,10 420,40 720,10 C1020,10 1180,80 1440,500 L1440,700 L0,700 Z"
-            fill="var(--green)"
-          />
-        </svg>
-      </div>
-
       <div class="container">
         <h2 class="centerTitle">Bigger than ever</h2>
         <p class="centerText">
@@ -213,18 +203,9 @@
          GET INVOLVED (purple band with wave + 3 cards)
     ========================== -->
     <section class="section section--purple" id="get-involved">
-      <div class="sectionWave sectionWave--top" aria-hidden="true">
-        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
-          <path
-            d="M0,20 C240,210 420,40 720,30 C1020,30 1180,80 1440,120 L1440,0 L0,0 Z"
-            fill="var(--white)"
-          />
-        </svg>
-      </div>
-
       <div class="container">
-        <h2 class="centerTitle centerTitle--white">Get involved</h2>
-        <p class="centerText centerText--white">
+        <h2 class="centerTitle centerTitle">Get involved</h2>
+        <p class="centerText centerText">
           Whether you’re an artist, venue, volunteer or supporter, there’s a place for you.
         </p>
 
@@ -249,14 +230,6 @@
         </div>
       </div>
 
-      <div class="sectionWave sectionWave--bottom" aria-hidden="true">
-        <svg viewBox="0 0 1440 240" preserveAspectRatio="none" focusable="false">
-          <path
-            d="M0,120 C220,40 480,220 740,130 C1010,40 1200,200 1440,120 L1440,240 L0,240 Z"
-            fill="var(--purple)"
-          />
-        </svg>
-      </div>
     </section>
 
     <!-- =========================

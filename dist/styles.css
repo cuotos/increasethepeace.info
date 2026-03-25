@@ -62,7 +62,8 @@ img{ max-width: 100%; display: block; }
   pointer-events: none;
 }
 .top__wave{ z-index: 1; }
-.top__wave svg{ width: 100%; height: 100%; display: block; }
+.top__wave{ color: var(--lilac); }
+.top__wave .waveImg{ width: 300%; height: 100%; display: block; }
 
 .top__inner{
   position: relative;
@@ -144,8 +145,11 @@ img{ max-width: 100%; display: block; }
 }
 
 .section--white{ background: var(--white); }
+
+/* ---- debug: section borders ---- */
+header, .section, footer{ outline: 2px dashed red; }
 .section--green{ padding-top: 30px; position: relative; }
-.section--purple{ background: var(--purple); padding-top: 64px; padding-bottom: 70px; position: relative;}
+.section--purple{ padding-top: 64px; padding-bottom: 70px; position: relative;}
 
 .sectionWave{
   position: absolute;
@@ -162,7 +166,10 @@ img{ max-width: 100%; display: block; }
 
 /* stacking for top pattern */
 .top__pattern{ z-index: 0; }
-.sectionWave svg{ width: 100%; height: 100%; display: block; }
+.sectionWave{ overflow: hidden; }
+.sectionWave .waveImg{ width: 300%; height: 100%; display: block; }
+.section--green .sectionWave--top{ color: var(--green); }
+#get-involved .sectionWave--bottom{ color: var(--purple); }
 
 .sectionWave--top{ top: -1px; }
 .sectionWave--bottom{ bottom: -1px; }
@@ -300,7 +307,6 @@ img{ max-width: 100%; display: block; }
   margin: 0;
   font-size: clamp(1.8rem, 4.6vw, 2.6rem);
 }
-.centerTitle--white{ color: var(--white); }
 
 .centerText{
   text-align: center;
@@ -310,7 +316,6 @@ img{ max-width: 100%; display: block; }
   font-size: 1rem;
 }
 .centerText--tight{ max-width: 70ch; }
-.centerText--white{ color: rgba(255,255,255,.88); }
 
 /* Trio cards (green + purple sections) */
 .trioGrid{
@@ -367,9 +372,7 @@ img{ max-width: 100%; display: block; }
 
 /* Footer */
 .footer{
-  background: var(--purple);
   padding: 22px 0;
-  color: var(--white);
 }
 
 .footer__inner{
