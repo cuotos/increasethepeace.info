@@ -151,7 +151,7 @@ img{ max-width: 100%; display: block; }
   position: absolute;
   left: 0;
   right: 0;
-  height: 240px;
+  height: 350px;
   pointer-events: none;
   line-height: 0;
 }
