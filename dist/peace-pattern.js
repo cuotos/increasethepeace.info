@@ -109,9 +109,12 @@
 
   container.appendChild(svg);
 
-  // Randomise the horizontal start position of each wave so they all look different
-  document.querySelectorAll('.waveImg').forEach(function(svg) {
-    var offset = (Math.random() * 200).toFixed(1);
-    svg.style.transform = 'translateX(-' + offset + '%)';
+  // Horizontal offsets (px) for each wave, in DOM order.
+  // Increase a value to shift that wave further left and reveal a different portion of the shape.
+  var waveOffsets = [300];
+
+  document.querySelectorAll('.waveImg').forEach(function(svg, i) {
+    var offset = waveOffsets[i] !== undefined ? waveOffsets[i] : 0;
+    svg.style.transform = 'translateX(-' + offset + 'px)';
   });
 })();

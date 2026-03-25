@@ -41,7 +41,7 @@ img{ max-width: 100%; display: block; }
 ========================= */
 .top{
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: var(--white);
   padding: 24px 0 54px;
 }
@@ -57,12 +57,13 @@ img{ max-width: 100%; display: block; }
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1px;
-  height: 65%;
+  top: 0;
+  height: 720px;
+  overflow: hidden;
   pointer-events: none;
+  z-index: 1;
+  color: var(--lilac);
 }
-.top__wave{ z-index: 1; }
-.top__wave{ color: var(--lilac); }
 .top__wave .waveImg{ width: 300%; height: 100%; display: block; }
 
 .top__inner{
