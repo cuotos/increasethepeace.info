@@ -346,10 +346,10 @@ img{ max-width: 100%; display: block; }
 
 .link--accent{ color: var(--purple); }
 
-/* Sponsors */
-.sponsors{ padding-top: 20px; }
+/* Partners */
+.partners{ padding-top: 20px; }
 
-.sponsorGrid{
+.partnersGrid{
   margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
@@ -359,7 +359,7 @@ img{ max-width: 100%; display: block; }
   justify-content: center;
 }
 
-.sponsorLogo{
+.partnersLogo{
   width: clamp(100px, 20vw, 200px);
   height: auto;
   object-fit: contain;
