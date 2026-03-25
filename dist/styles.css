@@ -371,7 +371,7 @@ header, .section, footer{ outline: 2px dashed red; }
   justify-content: center;
 }
 
-.sponsorLogo{
+.partnerLogo{
   width: clamp(100px, 20vw, 200px);
   height: auto;
   object-fit: contain;
