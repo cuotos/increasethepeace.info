@@ -109,12 +109,4 @@
 
   container.appendChild(svg);
 
-  // Horizontal offsets (px) for each wave, in DOM order.
-  // Increase a value to shift that wave further left and reveal a different portion of the shape.
-  var waveOffsets = [200, 600];
-
-  document.querySelectorAll('.waveImg').forEach(function(svg, i) {
-    var offset = waveOffsets[i] !== undefined ? waveOffsets[i] : 0;
-    svg.style.transform = 'translateX(-' + offset + 'px)';
-  });
 })();

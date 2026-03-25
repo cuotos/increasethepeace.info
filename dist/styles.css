@@ -57,23 +57,6 @@ img{ max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-.top__wave{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 720px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-.top__wave .waveImg{ width: 300%; height: 100%; display: block; }
-
-.top__wave.purple {
-  top: 300px;
-  height: 420px;
-}
-
 .z1 {z-index: 1;}
 .z2 {z-index: 2;}
 
@@ -162,14 +145,6 @@ header, .section, footer{ outline: 2px dashed red; }
 /* ensure section content appears above the waves */
 .section > .container{ position: relative; z-index: 10; }
 
-/* stacking for top pattern */
-.sectionWave{ overflow: hidden; }
-.sectionWave .waveImg{ width: 300%; height: 100%; display: block; }
-.section--green .sectionWave--top{ color: var(--green); }
-#get-involved .sectionWave--bottom{ color: var(--purple); }
-
-.sectionWave--top{ top: -1px; }
-.sectionWave--bottom{ bottom: -1px; }
 
 /* About layout */
 .twoCol{
