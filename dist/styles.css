@@ -36,6 +36,9 @@ img{ max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
+.lilac{ color: var(--lilac); }
+.purple{ color: var(--purple); }
+
 /* =========================
    TOP (pattern + wave + logo + nav)
 ========================= */
@@ -61,8 +64,7 @@ img{ max-width: 100%; display: block; }
   height: 720px;
   overflow: hidden;
   pointer-events: none;
-  z-index: 1;
-  color: var(--lilac);
+  z-index: 0;
 }
 .top__wave .waveImg{ width: 300%; height: 100%; display: block; }
 
@@ -72,7 +74,6 @@ img{ max-width: 100%; display: block; }
   justify-items: center;
   gap: 24px;
 }
-.top__inner{ z-index: 2; }
 
 /* Logo badge */
 .logoBadge{
@@ -150,7 +151,7 @@ img{ max-width: 100%; display: block; }
 /* ---- debug: section borders ---- */
 header, .section, footer{ outline: 2px dashed red; }
 .section--green{ padding-top: 30px; position: relative; }
-.section--purple{ padding-top: 64px; padding-bottom: 70px; position: relative;}
+.section--purple{ padding-top: 64px; padding-bottom: 70px; position: relative; z-index: 1; }
 
 .sectionWave{
   position: absolute;
@@ -318,6 +319,11 @@ header, .section, footer{ outline: 2px dashed red; }
 }
 .centerText--tight{ max-width: 70ch; }
 
+.heroCard{
+  padding: 32px 28px;
+  margin-bottom: 8px;
+}
+
 /* Trio cards (green + purple sections) */
 .trioGrid{
   margin-top: 24px;
@@ -365,7 +371,7 @@ header, .section, footer{ outline: 2px dashed red; }
   justify-content: center;
 }
 
-.partnersLogo{
+.sponsorLogo{
   width: clamp(100px, 20vw, 200px);
   height: auto;
   object-fit: contain;
