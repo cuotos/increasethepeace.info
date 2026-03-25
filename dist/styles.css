@@ -153,21 +153,11 @@ header, .section, footer{ outline: 2px dashed red; }
 .section--green{ padding-top: 30px; position: relative; }
 .section--purple{ padding-top: 64px; padding-bottom: 70px; position: relative; z-index: 1; }
 
-.sectionWave{
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 350px;
-  pointer-events: none;
-  line-height: 0;
-}
-.sectionWave{ z-index: 0; }
-
 /* ensure section content appears above the waves */
 .section > .container{ position: relative; z-index: 2; }
 
 /* stacking for top pattern */
-.top__pattern{ z-index: 0; }
+/* .top__pattern{ z-index: 0; } */
 .sectionWave{ overflow: hidden; }
 .sectionWave .waveImg{ width: 300%; height: 100%; display: block; }
 .section--green .sectionWave--top{ color: var(--green); }
@@ -380,6 +370,8 @@ header, .section, footer{ outline: 2px dashed red; }
 /* Footer */
 .footer{
   padding: 22px 0;
+  background-color: var(--purple);
+  color: var(--white);
 }
 
 .footer__inner{
@@ -397,7 +389,6 @@ header, .section, footer{ outline: 2px dashed red; }
 }
 .footer__sub{
   margin: 4px 0 0;
-  color: rgba(255,255,255,.82);
 }
 
 .footer__social{
