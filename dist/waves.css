@@ -1,15 +1,6 @@
-.top__wave{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 720px;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-.top__wave .waveImg{ width: max(300%, 4320px); height: 100%; display: block; margin-left: 50%; }
-
+/* =========================
+   KEYFRAMES
+========================= */
 @keyframes wave-drift-a {
   0%   { transform: translateX(-25%); }
   100% { transform: translateX(-27%); }
@@ -23,88 +14,73 @@
   100% { transform: translateX(-53%); }
 }
 
-.top__wave.lilac  .waveImg { animation: wave-drift-a 120s ease-in-out infinite alternate; }
-.top__wave.purple .waveImg { animation: wave-drift-b 60s ease-in-out infinite alternate; }
-
-.top__wave.purple {
-  top: 220px;
-  height: 500px;
-}
-
-.sectionWave{ overflow: hidden; }
-.sectionWave .waveImg{ width: 300%; height: 100%; display: block; }
-.section--green .sectionWave--top{ color: var(--green); }
-
-.sectionWave--top{ top: -1px; }
-.sectionWave--bottom{ bottom: -1px; }
-
-.section--green{
-  position: relative;
-  overflow-x: clip;
-}
-
-.section--purple{
-  position: relative;
-  overflow-x: clip;
-}
-
-.sectionWave--getinvolved{
+/* =========================
+   HEADER WAVES
+========================= */
+.top__wave {
   position: absolute;
   left: 0;
   right: 0;
-  top: -150px;
-  bottom: 0px;
-  color: var(--lilac);
+  top: 0;
+  height: 720px;
+  overflow: hidden;
+  pointer-events: none;
   z-index: 0;
 }
-.sectionWave--getinvolved .waveImg{
+.top__wave .wave-img        { width: max(300%, 4320px); height: 100%; display: block; margin-left: 50%; }
+.top__wave--lilac          { color: var(--lilac); }
+.top__wave--lilac .wave-img { animation: wave-drift-a 120s ease-in-out infinite alternate; }
+.top__wave--purple         { top: 220px; height: 500px; color: var(--purple); }
+.top__wave--purple .wave-img{ animation: wave-drift-b 60s ease-in-out infinite alternate; }
+
+/* =========================
+   SECTION FILL WAVES — shared base
+========================= */
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.wave .wave-img {
   width: max(300%, 4320px);
   height: 100%;
   display: block;
   margin-left: 50%;
-  animation: wave-drift-b 60s ease-in-out infinite alternate;
 }
 
-.footer{
+/* Sections that host a fill wave */
+.section--green,
+.section--purple,
+.footer {
   position: relative;
   overflow-x: clip;
 }
 
-.footer .container{
+.footer .container {
   position: relative;
   z-index: 10;
 }
 
-.sectionWave--footer{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -240px;
-  bottom: 0px;
-  color: var(--purple);
-  z-index: 0;
-}
-.sectionWave--footer .waveImg{
-  width: max(300%, 4320px);
-  height: 100%;
-  display: block;
-  margin-left: 50%;
-  animation: wave-drift-a 75s ease-in-out infinite alternate;
-}
-
-.sectionWave--greenFill{
-  position: absolute;
-  left: 0;
-  right: 0;
+/* =========================
+   INDIVIDUAL WAVES
+========================= */
+.wave--thisyear {
   top: -250px;
-  bottom: 0px;
   color: var(--green);
-  z-index: 0;
 }
-.sectionWave--greenFill .waveImg{
-  width: max(300%, 4320px);
-  height: 100%;
-  display: block;
-  margin-left: 50%;
-  animation: wave-drift-c 30s ease-in-out infinite alternate;
+.wave--thisyear .wave-img { animation: wave-drift-c 30s ease-in-out infinite alternate; }
+
+.wave--getinvolved {
+  top: -150px;
+  color: var(--lilac);
 }
+.wave--getinvolved .wave-img { animation: wave-drift-b 60s ease-in-out infinite alternate; }
+
+.wave--footer {
+  top: -240px;
+  color: var(--purple);
+}
+.wave--footer .wave-img { animation: wave-drift-a 75s ease-in-out infinite alternate; }
