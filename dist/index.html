@@ -53,7 +53,7 @@
           <a class="pill" href="#about">About</a>
           <a class="pill" href="#this-year">This year</a>
           <a class="pill" href="#artists">Artists</a>
-          <a class="pill" href="#venues">Our venues</a>
+          <button class="pill" onclick="openVenuesModal()">Our venues</button>
           <a class="pill" href="#charities">Charities</a>
           <a class="pill" href="#get-involved">Get involved</a>
         </nav>
@@ -182,7 +182,7 @@
           <article class="info-card">
             <h3>More venues</h3>
             <p>Across the high street and beyond, indoors and outdoors.</p>
-            <a class="link" href="#venues">See our venues +</a>
+            <button class="link" onclick="openVenuesModal()">See our venues +</button>
           </article>
 
           <article class="info-card">
@@ -291,6 +291,53 @@
         </div>
       </div>
     </footer>
+  <!-- Venues modal -->
+  <div class="modal-backdrop" id="venuesModal" role="dialog" aria-modal="true" aria-labelledby="venuesModalTitle" hidden>
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="venuesModalTitle">Our Venues</h2>
+        <button class="modal__close" onclick="closeVenuesModal()" aria-label="Close venues">&times;</button>
+      </div>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-item__name">The Street Stage</span>
+          <span class="venue-item__detail">High Street</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Cellar Bar</span>
+          <span class="venue-item__detail">Chaplins</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Underground Nights</span>
+          <span class="venue-item__detail">High Street</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">et al</span>
+          <span class="venue-item__detail"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="peace-pattern.js"></script>
+  <script>
+    function openVenuesModal() {
+      const modal = document.getElementById('venuesModal');
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      modal.querySelector('.modal__close').focus();
+    }
+    function closeVenuesModal() {
+      const modal = document.getElementById('venuesModal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }
+    document.getElementById('venuesModal').addEventListener('click', function(e) {
+      if (e.target === this) closeVenuesModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeVenuesModal();
+    });
+  </script>
   </body>
 </html>
