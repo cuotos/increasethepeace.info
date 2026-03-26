@@ -140,8 +140,16 @@ img{ max-width: 100%; display: block; }
 
 .section--white{ background: var(--white); }
 
+.section.section--what-is{
+  padding-bottom: 150px;
+}
+
+.section.section--whyitmatters{
+  padding-bottom: 100px;
+}
+
 /* ---- debug: section borders ---- */
-header, .section, footer{ outline: 2px dashed red; }
+/* header, .section, footer{ outline: 2px dashed red; } */
 /* ensure section content appears above the waves */
 .section > .container{ position: relative; z-index: 10; }
 
@@ -329,7 +337,7 @@ header, .section, footer{ outline: 2px dashed red; }
 .link--accent{ color: var(--purple); }
 
 /* Partners */
-.partners{ padding-top: 20px; }
+.partners{ padding-top: 20px; padding-bottom: 140px; }
 
 .partnersGrid{
   margin-top: 22px;
