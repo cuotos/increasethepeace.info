@@ -34,14 +34,18 @@ img{ max-width: 100%; display: block; }
 .container{
   width: var(--container);
   margin: 0 auto;
+  z-index: 10;
 }
+
+.lilac{ color: var(--lilac); }
+.purple{ color: var(--purple); }
 
 /* =========================
    TOP (pattern + wave + logo + nav)
 ========================= */
 .top{
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background: var(--white);
   padding: 24px 0 54px;
 }
@@ -53,16 +57,8 @@ img{ max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-.top__wave{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 65%;
-  pointer-events: none;
-}
-.top__wave{ z-index: 1; }
-.top__wave svg{ width: 100%; height: 100%; display: block; }
+.z1 {z-index: 1;}
+.z2 {z-index: 2;}
 
 .top__inner{
   position: relative;
@@ -70,7 +66,6 @@ img{ max-width: 100%; display: block; }
   justify-items: center;
   gap: 24px;
 }
-.top__inner{ z-index: 2; }
 
 /* Logo badge */
 .logoBadge{
@@ -144,28 +139,20 @@ img{ max-width: 100%; display: block; }
 }
 
 .section--white{ background: var(--white); }
-.section--green{ padding-top: 30px; position: relative; }
-.section--purple{ background: var(--purple); padding-top: 64px; padding-bottom: 70px; position: relative;}
 
-.sectionWave{
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 350px;
-  pointer-events: none;
-  line-height: 0;
+.section.section--what-is{
+  padding-bottom: 150px;
 }
-.sectionWave{ z-index: 0; }
 
+.section.section--whyitmatters{
+  padding-bottom: 100px;
+}
+
+/* ---- debug: section borders ---- */
+/* header, .section, footer{ outline: 2px dashed red; } */
 /* ensure section content appears above the waves */
-.section > .container{ position: relative; z-index: 2; }
+.section > .container{ position: relative; z-index: 10; }
 
-/* stacking for top pattern */
-.top__pattern{ z-index: 0; }
-.sectionWave svg{ width: 100%; height: 100%; display: block; }
-
-.sectionWave--top{ top: -1px; }
-.sectionWave--bottom{ bottom: -1px; }
 
 /* About layout */
 .twoCol{
@@ -300,7 +287,6 @@ img{ max-width: 100%; display: block; }
   margin: 0;
   font-size: clamp(1.8rem, 4.6vw, 2.6rem);
 }
-.centerTitle--white{ color: var(--white); }
 
 .centerText{
   text-align: center;
@@ -310,7 +296,11 @@ img{ max-width: 100%; display: block; }
   font-size: 1rem;
 }
 .centerText--tight{ max-width: 70ch; }
-.centerText--white{ color: rgba(255,255,255,.88); }
+
+.heroCard{
+  padding: 32px 28px;
+  margin-bottom: 8px;
+}
 
 /* Trio cards (green + purple sections) */
 .trioGrid{
@@ -347,7 +337,7 @@ img{ max-width: 100%; display: block; }
 .link--accent{ color: var(--purple); }
 
 /* Partners */
-.partners{ padding-top: 20px; }
+.partners{ padding-top: 20px; padding-bottom: 140px; }
 
 .partnersGrid{
   margin-top: 22px;
@@ -359,7 +349,7 @@ img{ max-width: 100%; display: block; }
   justify-content: center;
 }
 
-.partnersLogo{
+.partnerLogo{
   width: clamp(100px, 20vw, 200px);
   height: auto;
   object-fit: contain;
@@ -367,8 +357,8 @@ img{ max-width: 100%; display: block; }
 
 /* Footer */
 .footer{
-  background: var(--purple);
   padding: 22px 0;
+  background-color: var(--purple);
   color: var(--white);
 }
 
@@ -387,7 +377,6 @@ img{ max-width: 100%; display: block; }
 }
 .footer__sub{
   margin: 4px 0 0;
-  color: rgba(255,255,255,.82);
 }
 
 .footer__social{

@@ -108,4 +108,5 @@
   }
 
   container.appendChild(svg);
+
 })();
