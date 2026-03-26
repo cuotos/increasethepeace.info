@@ -40,7 +40,7 @@ img{ max-width: 100%; display: block; }
 ========================= */
 .top{
   position: relative;
-  overflow: visible;
+  overflow-x: clip;
   background: var(--white);
   padding: 24px 0 54px;
 }
@@ -350,6 +350,110 @@ img{ max-width: 100%; display: block; }
   object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: .95;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+.modal-backdrop[hidden]{ display: none; }
+
+.modal{
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 60px rgba(0,0,0,.25);
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 2px solid rgba(0,0,0,.06);
+  flex-shrink: 0;
+}
+
+.modal__title{
+  font-family: var(--font-display);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.modal__close{
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.modal__close:hover{ background: rgba(0,0,0,.06); }
+.modal__close:focus-visible{
+  outline: 3px solid rgba(138,31,120,.28);
+  outline-offset: 2px;
+}
+
+.venue-list{
+  list-style: none;
+  margin: 0;
+  padding: 16px 24px;
+  overflow-y: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.venue-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(138,31,120,.05);
+  border-radius: var(--radius-lg);
+  border: 2px solid rgba(138,31,120,.10);
+}
+
+.venue-item__name{
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.venue-item__detail{
+  color: var(--muted);
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+/* Make .pill work as a button too */
+button.pill{
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+/* Make .link work as a button too */
+button.link{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: inherit;
 }
 
 /* =========================

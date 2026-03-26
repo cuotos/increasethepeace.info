@@ -52,9 +52,9 @@
         <nav class="pill-nav" aria-label="Primary">
           <a class="pill" href="#about">About</a>
           <a class="pill" href="#this-year">This year</a>
-          <a class="pill" href="#artists">Artists</a>
-          <a class="pill" href="#venues">Our venues</a>
-          <a class="pill" href="#charities">Charities</a>
+          <button class="pill" onclick="openArtistsModal()">Artists</button>
+          <button class="pill" onclick="openVenuesModal()">Our venues</button>
+          <button class="pill" onclick="openCharitiesModal()">Charities</button>
           <a class="pill" href="#get-involved">Get involved</a>
         </nav>
       </div>
@@ -182,19 +182,19 @@
           <article class="info-card">
             <h3>More venues</h3>
             <p>Across the high street and beyond, indoors and outdoors.</p>
-            <a class="link" href="#venues">See our venues +</a>
+            <button class="link" onclick="openVenuesModal()">See our venues</button>
           </article>
 
           <article class="info-card">
             <h3>More artists</h3>
             <p>Music, performance, art, and the unexpected. Here are our headline ones..</p>
-            <a class="link" href="#artists">See our artists</a>
+            <button class="link" onclick="openArtistsModal()">See our artists</button>
           </article>
 
           <article class="info-card">
             <h3>More impact</h3>
             <p>Fundraising that stays rooted in the local community.</p>
-            <a class="link" href="#charities">See our charities</a>
+            <button class="link" onclick="openCharitiesModal()">See our charities</button>
           </article>
         </div>
       </div>
@@ -291,6 +291,107 @@
         </div>
       </div>
     </footer>
+  <!-- Artists modal -->
+  <div class="modal-backdrop" id="artistsModal" role="dialog" aria-modal="true" aria-labelledby="artistsModalTitle" hidden>
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="artistsModalTitle">Our Artists</h2>
+        <button class="modal__close" onclick="closeArtistsModal()" aria-label="Close artists">&times;</button>
+      </div>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-item__name">Artist TBC</span>
+          <span class="venue-item__detail"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Charities modal -->
+  <div class="modal-backdrop" id="charitiesModal" role="dialog" aria-modal="true" aria-labelledby="charitiesModalTitle" hidden>
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="charitiesModalTitle">Our Charities</h2>
+        <button class="modal__close" onclick="closeCharitiesModal()" aria-label="Close charities">&times;</button>
+      </div>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-item__name">Charity partners being selected</span>
+          <span class="venue-item__detail"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Venues modal -->
+  <div class="modal-backdrop" id="venuesModal" role="dialog" aria-modal="true" aria-labelledby="venuesModalTitle" hidden>
+    <div class="modal">
+      <div class="modal__header">
+        <h2 class="modal__title" id="venuesModalTitle">Our Venues</h2>
+        <button class="modal__close" onclick="closeVenuesModal()" aria-label="Close venues">&times;</button>
+      </div>
+      <ul class="venue-list">
+        <li class="venue-item">
+          <span class="venue-item__name">The Street Stage</span>
+          <span class="venue-item__detail">High Street</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Cellar Bar</span>
+          <span class="venue-item__detail">Chaplins</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">The Garden</span>
+          <span class="venue-item__detail">Chaplins</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Underground Nights</span>
+          <span class="venue-item__detail">High Street</span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Wild Cafe</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Ethicoco</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Soverign Circle</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Vita Nova</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">B.A.D</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Garden Rooms Cafe</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Factory Studios</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">TOSH</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Dance For All Studios</span>
+          <span class="venue-item__detail"></span>
+        </li>
+        <li class="venue-item">
+          <span class="venue-item__name">Boscombe Gardens</span>
+          <span class="venue-item__detail"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <script src="peace-pattern.js"></script>
+  <script src="modal.js"></script>
   </body>
 </html>
